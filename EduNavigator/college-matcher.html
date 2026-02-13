@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Matcher | EduNavigator</title>
+    <link rel="stylesheet" href="main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="glass-header">
+        <nav>
+            <div class="logo">EduNavigator</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="career-quiz.html">Career Quiz</a></li>
+                <li><a href="#" class="active">College Matcher</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="gradient-text">Find Your Dream College</h1>
+        <p class="subtitle">AI-driven recommendations based on your profile.</p>
+
+        <div class="matcher-layout">
+            <aside class="filters-panel">
+                <div class="filter-group">
+                    <h4>Program Focus</h4>
+                    <select id="program-filter">
+                        <option value="all">All Programs</option>
+                        <option value="tech">Technology & CS</option>
+                        <option value="art">Arts & Design</option>
+                        <option value="science">Sciences</option>
+                        <option value="business">Business</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Max Fees (Yearly)</h4>
+                    <input type="range" id="tuition-filter" min="0" max="500000" step="10000" value="500000">
+                    <div style="text-align: right; font-size: 0.8rem; margin-top: 0.5rem;">
+                        <span id="tuition-val">₹5L+</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Location</h4>
+                    <select id="location-filter">
+                        <option value="all">Anywhere in India</option>
+                        <option value="north">North (Delhi/NCR)</option>
+                        <option value="south">South (Bangalore/Chennai)</option>
+                        <option value="west">West (Mumbai/Pune)</option>
+                    </select>
+                </div>
+            </aside>
+
+            <section id="college-results" class="college-grid">
+                <!-- Colleges injected via JS -->
+                <div class="loader-container" style="grid-column: 1/-1;">
+                    <div class="loader"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="college-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title">College Name</h2>
+                <div class="modal-badges" id="modal-badges"></div>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Details injected here -->
+            </div>
+            <button class="primary-btn" style="width: 100%; margin-top: 1rem;"
+                onclick="document.getElementById('college-modal').classList.add('hidden')">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 EduNavigator. Made with ❤️ by Shravani Dhuri.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

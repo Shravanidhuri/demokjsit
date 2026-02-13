@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Discovery | EduNavigator</title>
+    <link rel="stylesheet" href="main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="glass-header">
+        <nav>
+            <div class="logo">EduNavigator</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Career Quiz</a></li>
+                <li><a href="college-matcher.html">College Matcher</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="quiz-section glass-card">
+            <h1 class="gradient-text">Career Discovery Engine</h1>
+            <p class="subtitle">Answer 3 simple questions to find your path.</p>
+
+            <form id="career-quiz-form">
+                <div class="question-group">
+                    <label>1. What interests you the most?</label>
+                    <div class="options">
+                        <label class="option-btn">
+                            <input type="radio" name="q1" value="tech" required>
+                            <span>💻 Technology & Code</span>
+                        </label>
+                        <label class="option-btn">
+                            <input type="radio" name="q1" value="art">
+                            <span>🎨 Art & Design</span>
+                        </label>
+                        <label class="option-btn">
+                            <input type="radio" name="q1" value="science">
+                            <span>🧬 Science & Research</span>
+                        </label>
+                        <label class="option-btn">
+                            <input type="radio" name="q1" value="business">
+                            <span>📈 Business & Money</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <label>2. Which work environment do you prefer?</label>
+                    <div class="options">
+                        <label class="option-btn">
+                            <input type="radio" name="q2" value="remote" required>
+                            <span>🏠 Remote / Home</span>
+                        </label>
+                        <label class="option-btn">
+                            <input type="radio" name="q2" value="office">
+                            <span>🏢 Corporate Office</span>
+                        </label>
+                        <label class="option-btn">
+                            <input type="radio" name="q2" value="field">
+                            <span>🌍 Outdoors / Field</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-group">
+                    <label>3. What is your strongest skill?</label>
+                    <div class="options">
+                        <label class="option-btn">
+                            <input type="radio" name="q3" value="logic" required>
+                            <span>🧠 Problem Solving</span>
+                        </label>
+                        <label class="option-btn">
+                            <input type="radio" name="q3" value="communication">
+                            <span>🗣️ Communication</span>
+                        </label>
+                        <label class="option-btn">
+                            <input type="radio" name="q3" value="creativity">
+                            <span>✨ Creativity</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn pulse">Analyze My Future</button>
+            </form>
+
+            <div id="results-container" class="hidden">
+                <div class="loader-container">
+                    <div class="loader"></div>
+                    <p>Analyzing responses...</p>
+                </div>
+                <div id="recommendations"></div>
+                <button onclick="location.reload()" class="secondary-btn" style="margin-top: 2rem;">Retake Quiz</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EduNavigator. Made with ❤️ by Shravani Dhuri.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
